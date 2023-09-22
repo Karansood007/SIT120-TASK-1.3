@@ -14,3 +14,24 @@ body, h1,h2,h3,h4,h5,h6 {
     min-height: 100%;
   }
   
+  
+  .container {
+    max-width: 1200px; /* Adjust the max-width as needed */
+    margin: 0 auto; /* Center-align the container itself */
+    text-align: left; /* Reset text alignment for inner content */
+  }
+
+ 
+  .custom-progress-bar {
+    height: 10px; /* Adjust the height of the progress bar */
+    background-color: #ddd; /* Background color of the progress bar container */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    margin-top: 10px; /* Adjust the margin as needed */
+  }
+
+  .custom-progress {
+    height: 100%;
+    width: 0;
+    background-color: black; /* Color of the progress bar */
+    border-radius: 5px; /* Optional: Add rounded corners */
+  }
