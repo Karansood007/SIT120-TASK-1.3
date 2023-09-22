@@ -4,182 +4,180 @@
   <title>KARAN SOOD PORTFOLIO</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="styles.css"> 
+  <style>
+    body {
+      font-family: "Montserrat", sans-serif;
+    }
+  </style>
 </head>
 <body>
 
 <div id="app">
-<!-- Hidden Sidebar (reveals when clicked on menu icon)-->
-<nav class="w3-sidebar w3-black w3-animate-right w3-xxlarge" style="display:none;padding-top:150px;right:0;z-index:2" id="mySidebar">
-  <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-black w3-xxxlarge w3-display-topright" style="padding:0 12px;">
+  <div class="container">
+
+<nav class="custom-sidebar" style="display:none;padding-top:150px;right:0;z-index:2" id="mySidebar">
+  <a href="javascript:void(0)" onclick="closeNav()" class="custom-close-button">
     <i class="fa fa-remove"></i>
   </a>
-  <div class="w3-bar-block w3-center">
-    <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Home</a>
-    <a href="#portfolio" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Portfolio</a>
-    <a href="#about" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">About</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Contact</a>
+  <div class="custom-sidebar-content">
+    <a href="#" class="custom-sidebar-item" onclick="closeNav()">Home</a>
+    <a href="#portfolio" class="custom-sidebar-item" onclick="closeNav()">Portfolio</a>
+    <a href="#about" class="custom-sidebar-item" onclick="closeNav()">About</a>
+    <a href="#contact" class="custom-sidebar-item" onclick="closeNav()">Contact</a>
   </div>
 </nav>
 
 <!-- Update your navigation links -->
-<a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black" v-on:click="closeNav()">Home</a>
-<router-link to="/portfolio" class="w3-bar-item w3-button w3-text-grey w3-hover-black" @click="closeNav()">Portfolio</router-link>
-<router-link to="/about" class="w3-bar-item w3-button w3-text-grey w3-hover-black" @click="closeNav()">About</router-link>
-<router-link to="/contact" class="w3-bar-item w3-button w3-text-grey w3-hover-black" @click="closeNav()">Contact</router-link>
+<a href="#" class="custom-nav-item" v-on:click="closeNav()">Home</a>
+<router-link to="/portfolio" class="custom-nav-item" @click="closeNav()">Portfolio</router-link>
+<router-link to="/about" class="custom-nav-item" @click="closeNav()">About</router-link>
+<router-link to="/contact" class="custom-nav-item" @click="closeNav()">Contact</router-link>
 
 <!-- Add a router-view for Vue components -->
 <router-view></router-view>
-
   
 <!-- Page Content -->
-<div class="w3-main w3-padding-large" style="margin-left:40%">
+<div class="custom-main-content" style="margin:0%">
 
   <!-- Menu icon to open sidebar -->
-  <span class="w3-button w3-top w3-white w3-xxlarge w3-text-grey w3-hover-text-black" style="width:auto;right:0;" onclick="openNav()"><i class="fa fa-bars"></i></span>
+  <span class="custom-menu-icon" style="width:auto;right:0;" onclick="openNav()"><i class="fa fa-bars"></i></span>
 
   <!-- Header -->
-  <header class="w3-container w3-center" style="padding:128px 16px" id="home">
-    <h1 class="w3-jumbo"><b>KARAN SOOD</b></h1>
+  <header class="custom-header" style="padding:128px 16px" id="home">
+    <style>
+      .custom-main-content{
+        background-color: #D0D3D4;
+        color: #17202A;
+        padding: 20px; 
+      }
+    </style>    
+    <h1 class="custom-title"><b>KARAN SOOD</b></h1>
     <p>DATA ANALYST</p>
-    <img src="/w3images/profile_girl.jpg" class="w3-image w3-hide-large w3-hide-small w3-round" style="display:block;width:60%;margin:auto;">
-    <img src="/w3images/profile_girl.jpg" class="w3-image w3-hide-large w3-hide-medium w3-round" width="1000" height="1333">
-    <button class="w3-button w3-light-grey w3-padding-large w3-margin-top">
+    <img src="data:image/png;base64,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" class="custom-profile-image" style="display:block;width:50%;margin:auto;">
+    <button class="custom-download-button">
       <i class="fa fa-download"></i> Download Resume
     </button>
   </header>
 
   <!-- Portfolio Section -->
-  <div class="w3-padding-32 w3-content" id="portfolio">
-    <h2 class="w3-text-grey">My Portfolio</h2>
-    <hr class="w3-opacity">
+  <div class="custom-portfolio-section" id="portfolio">
+    <h2 class="custom-section-title">My Portfolio</h2>
+    <style>
+      .custom-portfolio-section {
+        background-color: #707B7C;
+        color: white;
+        padding: 20px; 
+      }
+    </style>
+    <hr class="custom-section-divider">
 
     <!-- Grid for photos -->
-    <div class="w3-row-padding" style="margin:0 -16px">
-      <div class="w3-half">
-        <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/Data_Analyst_Job_Description.jpg" style="width:100%">
-        <img src="https://images.datacamp.com/image/upload/v1652357545/shutterstock_1770654182_d43667c1bc.jpg" style="width:100%">
-        <img src="https://www.iiba.org/globalassets/iiba-analyst-catalyst/images/here-is-some-information-about-what-a-big-data-analyst-is-and-does-social.jpg" style="width:100%">
-      </div>
-
-      <div class="w3-half">
-        <img src="https://www.cioinsight.com/wp-content/uploads/2022/06/Data-Analyst.jpeg" style="width:100%">
-        <img src="https://www.forbes.com/advisor/wp-content/uploads/2022/06/data_analytics_certifications_-_article_image.jpg" style="width:100%">
-        <img src="https://images.yourstory.com/cs/2/96eabe90392211eb93f18319e8c07a74/DATAANALYTICS-1686234812978.png" style="width:100%">
-        <img src="https://usa.bootcampcdn.com/wp-content/uploads/sites/108/2021/09/tes_dta_blog_image_8-850x412.jpg" style="width:100%">
-      </div>
-    <!-- End photo grid -->
+    <div class="custom-photo-grid">
+      <img src="https://www.cioinsight.com/wp-content/uploads/2022/06/Data-Analyst.jpeg" style="width:50%">
+      <img src="https://www.forbes.com/advisor/wp-content/uploads/2022/06/data_analytics_certifications_-_article_image.jpg" style="width:50%">
+      <img src="https://images.yourstory.com/cs/2/96eabe90392211eb93f18319e8c07a74/DATAANALYTICS-1686234812978.png" style="width:50%">
+      <img src="https://usa.bootcampcdn.com/wp-content/uploads/sites/108/2021/09/tes_dta_blog_image_8-850x412.jpg" style="width:50%">
     </div>
-  <!-- End Portfolio Section -->
+    <!-- End photo grid -->
   </div>
+  <!-- End Portfolio Section -->
 
   <!-- About Section -->
-  <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="about">
-    <h2>About</h2>
-    <hr class="w3-opacity">
+  <div class="custom-about-section" id="about">
+    <style>
+      .custom-about-section {
+        background-color: #34495E;
+        color: white;
+        padding: 20px; 
+      }
+    </style>
+    
+    <h2>About Me</h2>
+    <hr class="custom-section-divider">
     <p>I am a highly motivated and results-driven Data Analyst with a strong passion for transforming raw data into actionable insights. 
         With a solid foundation in statistical analysis, data visualization, and data manipulation, I also possess a proven track record of extracting valuable information to drive informed business decisions.
     </p>
-    <h3 class="w3-padding-16">My Skills</h3>
-    <p class="w3-wide">data visualization</p>
-    <div class="w3-light-grey">
-      <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:95%">95%</div>
+    <h3 class="custom-subsection-title">My Skills</h3>
+    <!-- Adding my skills with custom styling -->
+    <div class="custom-skill">
+      <p class="custom-skill-name">Data Visualization</p>
+      <div class="custom-progress-bar">
+        <div class="custom-progress" style="width: 95%;">
+          <span class="custom-skill-percent">95%</span></div>
+      </div>
+    <div class="custom-skill">
+      <p class="custom-skill-name">Communication</p>
+      <div class="custom-progress-bar">
+        <div class="custom-progress" style="width: 85%;">
+          <span class="custom-skill-percent">85%</span></div>
+      </div>
+     <div class="custom-skill">
+      <p class="custom-skill-name">Problem Solving</p>
+      <div class="custom-progress-bar">
+        <div class="custom-progress" style="width: 80%;">
+          <span class="custom-skill-percent">80%</span></div>
+      </div>
+      <div class="custom-skill">
+      <p class="custom-skill-name">Critical Thinking</p>
+      <div class="custom-progress-bar">
+        <div class="custom-progress" style="width: 90%;">
+          <span class="custom-skill-percent">90%</span></div>
+      </div>
     </div>
-    <p class="w3-wide">Web Design</p>
-    <div class="w3-light-grey">
-      <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:85%">85%</div>
-    </div>
-    <p class="w3-wide">database modelling</p>
-    <div class="w3-light-grey">
-      <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:80%">80%</div>
-    </div><br>
-
-
-    <button class="w3-button w3-light-grey w3-padding-large w3-section">
-      <i class="fa fa-download"></i> Download Resume
-    </button>
-
-   
-    
-  <!-- End About Section -->
   </div>
+  <!-- End About Section -->
 
   <!-- Contact Section -->
-  <div class="w3-padding-32 w3-content w3-text-grey" id="contact" style="margin-bottom:64px">
+  <div class="custom-contact-section" id="contact" style="margin-bottom:64px">
+    <style>
+      .custom-contact-section h2 {
+        background-color: #B2BABB ;
+        color: white;
+        padding: 20px; 
+      }
+    </style>
+    
     <h2>Contact Me</h2>
-    <hr class="w3-opacity">
+    <hr class="custom-section-divider">
 
-    <div class="w3-section">
-      <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> st kilda east, melbourne, VIC</p>
-      <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: 0422714592</p>
-      <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: karansood107@gmail.com</p>
+    <div class="custom-contact-info">
+      <p><i class="fa fa-map-marker fa-fw"></i>Address: st kilda east, melbourne, VIC</p>
+      <p><i class="fa fa-phone fa-fw"></i> Phone: 0422714592</p>
+      <p><i class="fa fa-envelope fa-fw"> </i> Email: karansood107@gmail.com</p>
     </div>
     
-   
-    <p>Lets get in touch. Send me a message:</p>
-    <form action="/action_page.php" target="_blank">
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" required name="Email"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Subject" required name="Subject"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" required name="Message"></p>
-      <p>
-        <button class="w3-button w3-light-grey w3-padding-large" type="submit">
-          <i class="fa fa-paper-plane"></i> SEND MESSAGE
-        </button>
-      </p>
+    <p>Lets get in touch. You can Send me mail via the mail ID provided above or a message:</p>
+    <form action="/action_page.php" target="_blank" class="custom-contact-form">
+      <input class="custom-input" type="text" placeholder="Name" required name="Name">
+      <input class="custom-input" type="text" placeholder="Email" required name="Email">
+      <input class="custom-input" type="text" placeholder="Subject" required name="Subject">
+      <input class="custom-input" type="text" placeholder="Message" required name="Message">
+      <button class="custom-submit-button" type="submit">
+        <i class="fa fa-paper-plane"></i> SEND MESSAGE
+      </button>
     </form>
-  <!-- End Contact Section -->
   </div>  
-  <!-- ContactComponent.vue -->
-<template>
-    <div>
-      <input v-model="name" type="text" placeholder="Name">
-      <input v-model="email" type="text" placeholder="Email">
-      <textarea v-model="message" placeholder="Message"></textarea>
-      <button @click="sendMessage">SEND MESSAGE</button>
-    </div>
-  </template>
-  
-  <script>
-  export default {
-    data() {
-      return {
-        name: '',
-        email: '',
-        message: '',
-      };
-    },
-    methods: {
-      sendMessage() {
-        // Handle sending the message here, e.g., make an HTTP request
-      },
-    },
-  };
-  </script>
-  
-  
+  <!-- End Contact Section -->
+  </div>
+
   <!-- Footer -->
-  <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin:-24px">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
-    <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green"> KARAN SOOD</a></p>
-  <!-- End footer -->
+  <footer class="custom-footer" style="margin:-24px">
+    <i class="fa fa-facebook-official custom-social-icon"></i>
+    <i class="fa fa-instagram custom-social-icon"></i>
+    <i class="fa fa-snapchat custom-social-icon"></i>
+    <i class="fa fa-pinterest-p custom-social-icon"></i>
+    <i class="fa fa-twitter custom-social-icon"></i>
+    <i class="fa fa-linkedin custom-social-icon"></i>
+    <p class="custom-powered-by">Powered by <a href="https://www.hindustantimes.com/ht-img/img/2023/09/20/550x309/gege_akutami_1695225795670_1695225816461.jpg" target="_blank" class="custom-powered-by-link"> KARAN SOOD</a></p>
   </footer>
-  
-<!-- END PAGE CONTENT -->
+  <!-- End footer -->
+</div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/vue@3.2.31/dist/vue.global.prod.js"></script>
-    <script src="main.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vue@3.2.31/dist/vue.global.prod.js"></script>
-<script src="https://unpkg.com/vue-router@4.0.12/dist/vue-router.min.js"></script>
-    
+<script src="vue.js"></script>
+<script src="vue-router.js"></script>
+<script src="main.js"></script>
+
 </body>
 </html>
